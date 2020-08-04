@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.hero-text{
+    font-size: 3rem;
+}

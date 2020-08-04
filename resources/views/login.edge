@@ -1,0 +1,26 @@
+@layout("layout")
+
+@section("style-section")
+{{style("css/login")}}
+@endsection
+    
+@section("content")
+    <div class="container">
+        <span class="hero-text"> 
+            LOGIN {{name+" "+age}}
+            
+            @if(age>=20)
+                <h3>you are adult</h3>
+            @endif
+
+            <ul>
+            @each(friend in friends)
+                <li><p>{{friend}}</p></li>
+            @endeach
+            </ul>
+
+        <p>{{address.postcode}}</p>
+
+        </span>
+    </div>
+@endsection
