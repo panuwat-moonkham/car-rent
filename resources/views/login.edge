@@ -6,21 +6,14 @@
     
 @section("content")
     <div class="container">
-        <span class="hero-text"> 
-            LOGIN {{name+" "+age}}
-            
-            @if(age>=20)
-                <h3>you are adult</h3>
-            @endif
+    <form method="POST" action="{{route('/login')}}">
+        {{csrfField()}}
+            <label for="username">Uuername</label>
+            <input type="text" name="username" id="username">
 
-            <ul>
-            @each(friend in friends)
-                <li><p>{{friend}}</p></li>
-            @endeach
-            </ul>
-
-        <p>{{address.postcode}}</p>
-
-        </span>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+            <button type="submit">SUBMIT</button>
+        </form>
     </div>
 @endsection
