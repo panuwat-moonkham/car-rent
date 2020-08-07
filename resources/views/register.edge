@@ -6,8 +6,33 @@
 
 @section("content")
     <div class="container">
-        <span class="hero-text"> 
-            REGISTER
-        </span>
+    <form action="{{route('/register')}}" method="POST">
+        {{csrfField()}}
+
+        <div class = form-group>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" >
+        </div>
+
+        <div class = form-group>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" >
+        </div>
+
+        <div class = form-group>
+            <label for="password">Password</label>
+            <input type="text" name="password" id="password" >
+        </div>
+        
+
+        <div class = form-group>
+            <label for="Confirm-password">ConfirmPassword</label>
+            <input type="text" name="confirm-password" id="confirm-password" >
+        </div class = button-register>
+            <button type="submit">Submit</button>
+        <div>
+
+        </div>
+    </form>
     </div>
 @endsection

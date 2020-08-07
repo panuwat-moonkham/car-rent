@@ -6,21 +6,28 @@
     
 @section("content")
     <div class="container">
-        <span class="hero-text"> 
-            LOGIN {{name+" "+age}}
-            
-            @if(age>=20)
-                <h3>you are adult</h3>
-            @endif
+      <form method="POST" action="{{ route('/login')}}">
+        {{csrfField()}}
 
-            <ul>
-            @each(friend in friends)
-                <li><p>{{friend}}</p></li>
-            @endeach
-            </ul>
+          <label for="username">username</label>
+          <input type="text" name="username" id="username" >
 
-        <p>{{address.postcode}}</p>
+          <label for="password">password</label>
+          <input type="password" name ="password" id="password">
 
-        </span>
+          <button type ="submit">Submit</button>
+      </form>
+      
+
+    <div class="fb-login-button" 
+    data-size="large" 
+    data-button-type="continue_with" 
+    data-layout="rounded" 
+    data-auto-logout-link="false" 
+    data-use-continue-as="false" 
+    data-width=""
+    onlogin ="checkLoginState();">
+  
+      </div>
     </div>
 @endsection

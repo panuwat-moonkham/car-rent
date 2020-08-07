@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div id = "marker"></div>     
+            <a href="#">Home</a>
+            <a href="#">Cars rent</a>
+            <a href="#">Services</a>
+            <a href="#">Team</a>
+            <a href="#">Contact</a>
+    </nav>
+    <script type="text/javascript">
+    var marker = document.querySelector('#marker') ;
+    var item = document.querySelectorAll('nav a') ;
+
+    function indicator(e){
+        marker.style.left = e.offsetleft+"px" ;
+        marker.style.width = e.offsetWidth+"px" ;
+    }
+
+item.forEach(link =>{
+    link.addEventListener('click' , (e) =>{
+        indicator(e.target) ;
+    })
+})
+
+    </script>
+</body>
+</html>
