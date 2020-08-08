@@ -7,17 +7,16 @@
     <link rel="stylesheet" href="./main.css">
 
     @include('global-css')
-    {{style("css/reset")}}
 
     @!section("style-section")
 
     <script>
         window.fbAsyncInit = function() {
           FB.init({
-            appId      : '{651382028797573}',
+            appId      : '1034942980242095',
             cookie     : true,
             xfbml      : true,
-            version    : '{v8.0}'
+            version    : 'v8.0'
           });
             
           FB.AppEvents.logPageView();   
@@ -33,19 +32,14 @@
          }(document, 'script', 'facebook-jssdk'));
       </script>
 
-    <title>Test CSS</title>
+    <title>RentX</title>
 </head>
 <body>
-    {{ script('js/index') }}
-    @!section('content')
+    <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v8.0&appId=1034942980242095&autoLogAppEvents=1" nonce="WkLj7QRB"></script>
+        @!section('content')
 
-        <div id="fb-root"></div>
-    
-    <script async defer crossorigin="anonymous" 
-        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=651382028797573&autoLogAppEvents=1" 
-        nonce="V1OxyT0g">
-    </script>
-
-
+        {{script('js/index')}}
 </body>
+
 </html>

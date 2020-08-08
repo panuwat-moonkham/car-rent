@@ -1,9 +1,21 @@
 .container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+    width: 90%;
+    margin: 0 auto;
 }
 .hero-text{
     font-size: 2rem;
+}
+.content_area{
+    width: 70%;
+    height: 50%;
+    margin: 0 auto;
+    background-color: aqua;
+    text-align: center;
+}
+.content_bx{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
 }
