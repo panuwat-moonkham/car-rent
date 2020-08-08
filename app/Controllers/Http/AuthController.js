@@ -1,6 +1,6 @@
-'use strict'
+'use strict';
 
-const Database = use("Database");
+const Database = use("Database") ; 
 
 class AuthController {
     async login({view, request, response}){
@@ -28,10 +28,11 @@ class AuthController {
         //console.log(profile);
         return response.redirect("/login")
         
+        return respone.redirect("/login")
     }
 
     register({view}){
-        return view.render("register")
+        return view.render("register") ;
     }
 
     async registerUser({request,response}){ // * ===async
@@ -43,4 +44,8 @@ class AuthController {
     
 }    
 
-module.exports = AuthController
+
+    // * -> async 
+
+
+module.exports = AuthController ;

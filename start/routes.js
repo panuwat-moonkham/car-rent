@@ -18,26 +18,16 @@ const Route = use('Route')
 
 Route.on('/').render('index')
 
-Route.get("/login","AuthController.login")
-Route.post("/login","AuthController.loginUser")
+//Route.on('/login').render('login')
+Route.get("/login","AuthController.login");
+Route.post("/login" , "Authcontrooler.loginUser")
 
 Route.get("/register","AuthController.register")
 Route.post("/register","AuthController.registerUser")
 Route.post("/api/register","AuthController.registerUser")
 
+Route.get("/register" , "AuthController.register");
+Route.post("/register" , "Authcontroller.registerUser");
 
+Route.post("/api/register" , "Authcontrooler.registerUser");
 
-//Route.on('/login').render('login')
-// Route.get("/login",(context)=>{
-//     const { view , request , response} = context
-
-//     const name = "Panuwat"
-//     const age= 20;
-//     const friends = ["aaa","bbb","ccc","ddd"]
-//     const address = {
-//         postcode:"10140",
-//         country:"Thailand",
-//     };
-
-//     return view.render("login",{name,age,friends,address})
-// })
