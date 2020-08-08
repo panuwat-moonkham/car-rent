@@ -2,31 +2,25 @@
 
 @section("style-section")
 {{style("css/index")}}
+
 @endsection
     
 @section("content")
-<div class="menubar">
-    <div class="container">
-        <div class="logo">
-            <a href="index"><h1>RentX</h1></a>
-        </div>
-        <ul class="menu">
-            <li><a href="">Car</a></li>
-            <li><a href="">Rent</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="login">Login</a></li>
-            <li><a href="">Sign Up</a></li>
-        </ul>
-    </div>
-</div>
 
-    <header class="header">
-        <div class="container">
-            <div class="header_area">
-                <h1>It's too easy to rent<br>cars in little time</h1>
-            </div>
-        </div>
-    </header>
+
+<header>
+    <img class="logo" src="image/RentX.png" alt="logo" >
+    <nav>
+        <ul class="nav_links">
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav> 
+    <a class="cta" href="#"><button>Contact</button></a>
+</header>
+
+
 
     <div class="form">
         <div class="container">
@@ -42,8 +36,12 @@
 
                         <label for="pickUpLocation">Enter your pick up location</label><br>
                         <input type="text" name="pickUpLocation" id="pickUpLocation" style="width:680px;"><br>
-
-                        <button type="submit"> Search Car </button>
+                    
+                    
+                        <div class="bottom-click">
+                            <a href="#"> Search car </a>
+                        </div>
+                    
                 </form>
             </div>
         </div>
@@ -111,6 +109,32 @@
         </div>
 
     </div>
+
+    <footer>
+        <div class="footer-container">
+          <div class="left-col">
+            <img src="image/RentX.png" alt="" class="logo">
+            <div class="social-media">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="rights-text">© 2020 Created By Team Project Camt Dii M.5</p>
+          </div>
+  
+          <div class="right-col">
+            <h1>Our Newsletter</h1>
+            <div class="border"></div>
+            <p>Enter Your Email to get our news and updates.</p>
+            <form action="" class="newsletter-form">
+              <input type="text" class="txtb" placeholder="Enter Your Email">
+              <input type="submit" class="btn" value="submit">
+            </form>
+          </div>
+        </div>
+      </footer>
 
 
 @endsection
