@@ -5,9 +5,43 @@
 @endsection
 
 @section("content")
+<div class="menubar">
     <div class="container">
-        <span class="hero-text"> 
-            REGISTER
-        </span>
+        <div class="logo">
+            <a href="index"><h1>RentX</h1></a>
+        </div>
+        <ul class="menu">
+            <li><a href="">Car</a></li>
+            <li><a href="">Rent</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="login">Login</a></li>
+            <li><a href="">Sign Up</a></li>
+        </ul>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="content">
+        <form method="POST" action="{{route('/register')}}">
+            {{csrfField()}}
+                <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" name="username" id="username">
+
+                <div class="form-group">
+                <label for="email">email</label>
+                <input type="text" class="form-control" name="email" id="email">
+                    
+                <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" id="password">
+
+                <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" class="form-control" name="confirmPassword" id="confirmPassword"><br>
+
+                <button type="submit">submit</button>
+        </form>
+        </div>
     </div>
 @endsection

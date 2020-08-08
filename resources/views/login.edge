@@ -5,15 +5,36 @@
 @endsection
     
 @section("content")
+<div class="menubar">
     <div class="container">
+        <div class="logo">
+            <a href="index"><h1>RentX</h1></a>
+        </div>
+        <ul class="menu">
+            <li><a href="">Car</a></li>
+            <li><a href="">Rent</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="login">Login</a></li>
+            <li><a href="">Sign Up</a></li>
+        </ul>
+    </div>
+</div>
+<div class="content_bx">
+ <div class="content_area">
     <form method="POST" action="{{route('/login')}}">
         {{csrfField()}}
-            <label for="username">Uuername</label>
-            <input type="text" name="username" id="username">
+            <label>Log In</label><br>
+            <input type="text" name="username" id="username" placeholder="Username"><br>
 
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password">
-            <button type="submit">SUBMIT</button>
+            <input type="password" name="password" id="password" placeholder="Password"><br>
+            <button type="submit">Login</button>
+            <p>Or</p>
+
         </form>
+        <div class="fb-login-button" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width="" onlogin="checkLoginState"></div><br>
+        <a href="">forgrt password</a> |
+        <a href="">register</a>
+        
     </div>
+</div>
 @endsection

@@ -1,0 +1,47 @@
+.container{
+    width: 90%;
+    margin: 0 auto;
+    height: 200%;
+}
+
+.header{
+    width: 100%;
+    height: 600px;
+    padding-top: 60px;
+    background: url(../images/indexbg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.header_area{
+    padding-top: 160px;
+}
+.header_area h1{
+    font-size: 3rem;
+    padding-left: 300px;
+}
+
+.form_area{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.form_area input{
+    margin:15px 0;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #333;
+    padding: 10px;
+    font-size: 25px;
+}
+.form_area button{
+    text-transform: uppercase;
+    width: 400px;
+    height: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 150px;
+}

@@ -1,0 +1,52 @@
+@layout("layout")
+
+@section("style-section")
+{{style("css/index")}}
+@endsection
+    
+@section("content")
+<div class="menubar">
+    <div class="container">
+        <div class="logo">
+            <a href="index"><h1>RentX</h1></a>
+        </div>
+        <ul class="menu">
+            <li><a href="">Car</a></li>
+            <li><a href="">Rent</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="login">Login</a></li>
+            <li><a href="">Sign Up</a></li>
+        </ul>
+    </div>
+</div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header_area">
+                <h1>It's too easy to rent<br>cars in little time</h1>
+                
+            </div>
+        </div>
+    </header>
+
+    <div class="form">
+        <div class="container">
+            <div class="form_area">
+                <form method="POST" action="{{route('/login')}}">
+                    {{csrfField()}}
+                    
+                        <label for="receive">Receive</label>
+                        <label for="return" style="margin-left:270px">Return</label><br>
+                        
+                        <input type="text" name="receive" id="receive" style="width:300px;">                        
+                        <input type="text" name="return" id="return" style="width:300px; margin-left:50px;"><br>
+
+                        <label for="pickUpLocation">Enter your pick up location</label><br>
+                        <input type="text" name="pickUpLocation" id="pickUpLocation" style="width:680px;"><br>
+
+                        <button type="submit">SEARCH MY CAR</button>
+                </form>
+            </div>
+        </div>
+    </div>
+@endsection

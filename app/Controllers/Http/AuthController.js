@@ -24,6 +24,7 @@ class AuthController {
 
     loginUser({view, request, response}){
         const {username,password} = request.body;
+        //?{_csrf:"",username,password}
         //console.log(profile);
         return response.redirect("/login")
         
@@ -31,6 +32,13 @@ class AuthController {
 
     register({view}){
         return view.render("register")
+    }
+
+    async registerUser({request,response}){ // * ===async
+        const {email,password,username}=request.body
+        await Database.from("users").insert({email,password,username})
+        //yield===await
+        return response.redirect("/login")
     }
     
 }    
