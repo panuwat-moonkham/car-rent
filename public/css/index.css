@@ -8,6 +8,7 @@
 }
 
 
+/* header */
 li,a,button{
     font-weight: 500;
     font-size: 25px;
@@ -48,6 +49,8 @@ header{
 {
     color: #c31432;
 }
+
+/* end header */
 
 button
 {
