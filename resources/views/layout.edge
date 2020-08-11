@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewpoint" content="width=device-width, initial-scale-1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
 
     @include('global-css')
+    {{style("css/index")}}
 
     @!section("style-section")
     <header>
-      <img class="logo" src="image/RentX.png" alt="logo" >
+      <a href="index"><img class="logo" src="image/RentX.png" alt="logo" ></a>
       <nav>
           <ul class="nav_links">
               <li><a href="#">Service</a></li>
@@ -19,7 +19,7 @@
               <li><a href="#">Contact</a></li>
           </ul>
       </nav> 
-      <a class="cta" href="#"><button>login</button></a>
+      <a class="cta" href="login"><button>login</button></a>
   </header>
 
     <script>

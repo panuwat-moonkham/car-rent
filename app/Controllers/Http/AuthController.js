@@ -3,6 +3,9 @@
 const Database = use("Database") ; 
 
 class AuthController {
+    index({view}){
+        return view.render("index") ;
+    }
     async login({view, request, response}){
         const users = await Database.from("profiles").where({name: "john"})
         // const users = await Database.select("name","age")
