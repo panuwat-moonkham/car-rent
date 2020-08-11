@@ -30,8 +30,6 @@ class AuthController {
         //?{_csrf:"",username,password}
         //console.log(profile);
         return response.redirect("/login")
-        
-        return respone.redirect("/login")
     }
 
     register({view}){

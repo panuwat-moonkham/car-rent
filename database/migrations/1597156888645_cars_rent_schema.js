@@ -5,11 +5,11 @@ const Schema = use('Schema')
 
 class CarsRentSchema extends Schema {
   up () {
-    this.create('cars_rents', (table) => {
+    this.create('cars_rent', (table) => {
       table.increments()
-      table.int("car_id")
-      table.enum("rent_status")
-      table.datetime("rent_date")
+      table.integer('car_id',5)
+      table.enu('rent_status','Returned','Renting')
+      table.datetime('rent_date')
       table.timestamps()
     })
   }

@@ -7,10 +7,10 @@ class CarsSchema extends Schema {
   up () {
     this.create('cars', (table) => {
       table.increments()
-      table.string("car_name")
-      table.integer("car_price")
-      table.string("car_img")
-      table.string("item")
+      table.string('car_name',100)
+      table.integer('car_price',5)
+      table.string('car_img',100)
+      table.integer('item',4)
       table.timestamps()
     })
   }

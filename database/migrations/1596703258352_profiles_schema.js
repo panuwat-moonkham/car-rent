@@ -7,8 +7,8 @@ class ProfilesSchema extends Schema {
   up () {
     this.create('profiles', (table) => {
       table.increments()
-      table.string("name")
-      table.integer("age")
+      table.string('name')
+      table.integer('age')
       table.timestamps()
     })
   }
