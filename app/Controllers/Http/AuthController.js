@@ -3,6 +3,9 @@
 const Database = use("Database") ; 
 
 class AuthController {
+    index({view}){
+        return view.render("index") ;
+    }
     async login({view, request, response}){
         const users = await Database.from("profiles").where({name: "john"})
         // const users = await Database.select("name","age")
@@ -27,8 +30,6 @@ class AuthController {
         //?{_csrf:"",username,password}
         //console.log(profile);
         return response.redirect("/login")
-        
-        return respone.redirect("/login")
     }
 
     register({view}){
