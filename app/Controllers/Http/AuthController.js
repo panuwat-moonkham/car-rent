@@ -42,10 +42,14 @@ class AuthController {
         return response.redirect("/login")
     }
     
+    index({view,request,response}){
+        return view.render("index") ;
+    }
+
 }    
+    
 
-
-    // * -> async 
+    
 
 
 module.exports = AuthController ;
