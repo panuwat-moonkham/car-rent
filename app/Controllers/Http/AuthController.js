@@ -25,11 +25,19 @@ class AuthController {
     return view.render("login",{name,age,friends,address})
     }
 
-    loginUser({view, request, response}){
-        const {username,password} = request.body;
-        //?{_csrf:"",username,password}
-        //console.log(profile);
-        return response.redirect("/login")
+    async loginUser({view, request, response}){
+        const {email,password} = request.body;
+        const data = await Database
+            .select("*")
+            .from('users')
+            .where({username:email,password})
+
+        if (data.length){
+            return response.redirect('/index')
+        }else{
+            return response.redirect("/login")
+        }
+        
     }
 
     register({view}){
