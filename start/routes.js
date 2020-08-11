@@ -21,7 +21,7 @@ Route.get("/index","AuthController.index");
 
 //Route.on('/login').render('login')
 Route.get("/login","AuthController.login");
-Route.post("/login" , "Authcontrooler.loginUser")
+Route.post("/login" , "Authcontroller.loginUser")
 
 Route.get("/register","AuthController.register")
 Route.post("/register","AuthController.registerUser")
