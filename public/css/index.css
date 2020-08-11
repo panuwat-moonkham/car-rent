@@ -12,7 +12,7 @@
 li,a,button{
     font-weight: 500;
     font-size: 25px;
-    color: black;
+    color: #000;
     text-decoration: none;
 }
 
@@ -47,7 +47,7 @@ header{
 
 .nav_links li a:hover
 {
-    color: #c31432;
+    color: #45a247;
 }
 
 /* end header */
@@ -55,7 +55,7 @@ header{
 button
 {
     padding: 9px 25px;
-    background-color: #c31432;
+    background-color: #283c86;
     color: white;
     border: none;
     border-radius: 50px;
@@ -64,7 +64,7 @@ button
 }
 
 button:hover{
-    background-color: #240b36;
+    background-color: #45a247;
 
 }
 
@@ -108,9 +108,9 @@ button:hover{
     font-size: 25px;
 }
 
-.form_area label {
+/* .form_area label {
     margin: ;
-}
+} */
 
 .bottom-click{
     justify-content: center;
@@ -121,7 +121,7 @@ button:hover{
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    background: #000;
+    background:#283c86;
     color: #fff;
     border-radius: 40px;
     text-decoration: none;
@@ -135,7 +135,7 @@ button:hover{
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    background: #c31432;
+    background: #45a247;
     color: #fff;
     border-radius: 40px;
     text-decoration: none;
@@ -230,7 +230,7 @@ button:hover{
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    background: #000;
+    background: #283c86;
     color: #fff;
     border-radius: 40px;
     text-decoration: none;
@@ -243,7 +243,7 @@ button:hover{
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    background:#c31432;
+    background: #45a247;
     color: #fff;
     border-radius: 40px;
     text-decoration: none;
@@ -296,7 +296,7 @@ footer{
     flex: 1;
     padding: 18px 40px;
     font-size: 16px;
-    color: #293043;
+    color: #283c86;
     background: #ddd;
     border: none;
     font-weight: 700;
@@ -309,7 +309,7 @@ footer{
     padding: 18px 40px;
     font-size: 16px;
     color: #f1f1f1;
-    background: #fc5c65;
+    background: #45a247;
     border: none;
     font-weight: 700;
     outline: none;
@@ -318,9 +318,10 @@ footer{
     cursor: pointer;
     transition: opacity .3s linear;
   }
-  
+
   .btn:hover{
-    opacity: .7;
+    opacity: .3;
+    background: #45a247;
   }
   
   .page-content{
