@@ -19,6 +19,15 @@ const Route = use('Route')
 Route.on('/').render('index')
 Route.get("/index","AuthController.index");
 
+
+Route.on('/').render('cars')
+Route.get("/cars","AuthController.cars");
+
+Route.on('/').render('services')
+Route.get("/services","AuthController.services");
+
+
+
 //Route.on('/login').render('login')
 Route.get("/login","AuthController.login");
 Route.post("/login" , "Authcontroller.loginUser")
@@ -26,3 +35,7 @@ Route.post("/login" , "Authcontroller.loginUser")
 Route.get("/register","AuthController.register")
 Route.post("/register","AuthController.registerUser")
 Route.post("/api/register","AuthController.registerUser")
+
+Route.get("/login","AuthController.login");
+Route.post("/login" , "Authcontroller.loginUser")
+
