@@ -1,4 +1,6 @@
-li,a,button
+/* Start header */
+
+li,a
 {
     font-weight: 500;
     font-size: 25px;
@@ -43,9 +45,28 @@ header
 }
 
 
+.cta a
+{
+    padding: 15px 24px ;
+    background : #283c86;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.cta a :hover{
+    background: #45a247;
+
+}
+
+
+
 button
 {
-    padding: 9px 25px;
+    margin-left: 20px;
+    padding: 18px 40px;
     background-color: #283c86;
     color: white;
     border: none;
@@ -59,6 +80,7 @@ button:hover{
 
 }
 
+/* footer */
 footer{
     background: #f1f1f1;
     padding: 90px 0;
@@ -112,8 +134,8 @@ footer{
   .btn{
     padding: 18px 40px;
     font-size: 16px;
-    color: #f1f1f1;
-    background: #45a247;
+    /* color: #f1f1f1; */
+    background: #283c86;
     border: none;
     font-weight: 700;
     outline: none;
@@ -124,7 +146,7 @@ footer{
   }
 
   .btn:hover{
-    opacity: .3;
+    /* opacity: .3; */
     background: #45a247;
   }
   
