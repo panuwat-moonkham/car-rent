@@ -8,12 +8,6 @@ class AuthController {
     }
     async login({view, request, response}){
         const users = await Database.from("profiles").where({name: "john"})
-        // const users = await Database.select("name","age")
-        // .form("users")
-        // .where({age:"20"})// เอาอายุ=20
-        // .whereNot({name: "john"})//ไม่เอาอายุ=20
-        // .whereBetween('age',[18,32]) //เอาอะยุระหว่าง 18-32
-        // //select("*") all       ("name","!=","john")
 
         const name = "Panuwat"
         const age= 20;
@@ -25,11 +19,19 @@ class AuthController {
     return view.render("login",{name,age,friends,address})
     }
 
-    loginUser({view, request, response}){
-        const {username,password} = request.body;
-        //?{_csrf:"",username,password}
-        //console.log(profile);
-        return response.redirect("/login")
+    async loginUser({view, request, response}){
+        const {email,password} = request.body;
+        const data = await Database
+            .select("*")
+            .from('users')
+            .where({username:email,password})
+
+        if (data.length){
+            return response.redirect('/index')
+        }else{
+            return response.redirect("/login")
+        }
+        
     }
 
     register({view}){

@@ -7,15 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
 
     @include('global-css')
-    {{style("css/index")}}
+    {{style("css/main")}}
 
     @!section("style-section")
     <header>
-      <a href="index"><img class="logo" src="image/RentX.png" alt="logo" ></a>
+      <a class = "logo" href="index"><img src="image/RentX.png" alt="logo" ></a>
       <nav>
           <ul class="nav_links">
-              <li><a href="#">Service</a></li>
-              <li><a href="#">Cars</a></li>
+              <li><a href="Services">Service</a></li>
+              <li><a href="cars">Cars</a></li>
               <li><a href="#">Contact</a></li>
           </ul>
       </nav> 
@@ -74,10 +74,12 @@
       <p> Enter Your Email to get our news and updates </p>
       <form action="" class="newsletter-form">
         <input type="text" class="txtb" placeholder="Enter Your Email">
-        <input type="submit" class="btn" value="submit">
+        {{--  <input type="submit" class="btn" value="submit">  --}}
       </form>
+      <input type="submit" class="btn" value="submit">
     </div>
   </div>
+  
 </footer>
 
 </html>

@@ -8,35 +8,72 @@
     
 @section("content")
 
+<section>
+    <div class="containhead">
+        <div class="containhead-info">
+            <div class = "contain-info">
+                <h2>Contact info</h2>
+                <ul class = info>
+                    <li>
+                        <span><img src="image/placeholder.png"></span>
+                        <span> CAMT CHIANGMAI UNIVERSITY  </span>
 
-    <div class="form">
-        <div class="container">
-            <div class="form_area">
-                <form method="POST" action="{{route('/login-register')}}">
-                    {{csrfField()}}
-                    
-                        <label for="receive">Receive</label>
-                        <label for="return" style="margin-left:270px">Return</label><br>
+                    </li>
+
+                    <li>
+                        <span><img src="image/envelope.png"></span>
+                        <span> testmail.gmail.com </span>
                         
-                        <input type="text" name="receive" id="receive" style="width:300px;">                        
-                        <input type="text" name="return" id="return" style="width:300px; margin-left:50px;"><br>
+                    </li>
 
-                        <label for="pickUpLocation">Enter your pick up location</label><br>
-                        <input type="text" name="pickUpLocation" id="pickUpLocation" style="width:680px;"><br>
-                    
-                    
-                        <div class="bottom-click">
-                            <a href="#"> Search car </a>
-                        </div>
-                    
-                </form>
+                    <li>
+                        <span><img src="image/phone-call.png"></span>
+                        <span> +66(123456789)  </span>
+                        
+                    </li>
+                </ul>
+            </div>
+                
+        </div>
+        <div class="contactForm">
+            <h2>Send a message </h2>
+            <div class="formBox">
+                
+                <div class="inputBox w50">
+                    <input type="text" name= "" required >
+                    <span>First Name</span>
+                </div>
+
+                <div class="inputBox w50">
+                    <input type="text" name= "" required >
+                    <span>Last Name</span>
+                </div>
+
+                <div class="inputBox w50">
+                    <input type="text" name= "" required >
+                    <span>Email address</span>
+                </div>
+
+                <div class="inputBox w50">
+                    <input type="text" name= "" required >
+                    <span>Mobile Number</span>
+                </div>
+
+                <div class="inputBox w100">
+                    <textarea name="" required></textarea>
+                    <span>Write  your message here ... </span>
+                </div>
+
+                <div class="inputBox w100">
+                    <input type="submit" value="Send">
+                </div>
+
             </div>
         </div>
     </div>
-
+</section>
 
     <div class="box1">
-
     <div class="boxcard">
         <div class="card">
             <div class = "face face1">
