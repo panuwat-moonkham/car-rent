@@ -129,20 +129,22 @@ footer{
     outline: none;
     border-radius: 30px;
     min-width: 260px;
+    margin-top: 10px
   }
   
   .btn{
-    padding: 18px 40px;
+    padding: 18px 20px;
     font-size: 16px;
-    /* color: #f1f1f1; */
+    color: #f1f1f1;
     background: #283c86;
     border: none;
     font-weight: 700;
     outline: none;
     border-radius: 30px;
-    margin-left: 20px;
+    margin-left: 270px;
     cursor: pointer;
     transition: opacity .3s linear;
+    margin-top: 10px;
   }
 
   .btn:hover{
