@@ -1,0 +1,30 @@
+@layout("layout")
+
+@section("style-section")
+
+@endsection
+    
+@section("content")
+<form method="POST" action="{{route('/add_car')}}">
+    {{csrfField()}}
+<h2>add car</h2>
+<label>
+    <span>Car Name</span>
+    <input type="text" name="car_name" id="car_name">
+</label>
+<label>
+    <span>Price</span>
+    <input type="number" name="car_price" id="car_price">
+</label>
+<label>
+    <span>Images</span>
+    <input type="text" name="car_img" id="car_img">
+</label>
+<label>
+    <span>Amount</span>
+    <input type="text" name="item" id="item">
+</label>
+<button type="submit" class="submit">SUBMIT</button>
+</form>
+
+@endsection
