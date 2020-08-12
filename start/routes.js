@@ -36,6 +36,4 @@ Route.get("/register","AuthController.register")
 Route.post("/register","AuthController.registerUser")
 Route.post("/api/register","AuthController.registerUser")
 
-Route.get("/login","AuthController.login");
-Route.post("/login" , "Authcontroller.loginUser")
 
