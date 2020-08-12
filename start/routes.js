@@ -26,7 +26,9 @@ Route.get("/cars","AuthController.cars");
 Route.on('/').render('services')
 Route.get("/services","AuthController.services");
 
-
+Route.get("/add_car","AuthController.add_car")
+Route.post("/add_car","AuthController.add_car_data")
+Route.post("/api/add_car","AuthController.add_car_data")
 
 //Route.on('/login').render('login')
 Route.get("/login","AuthController.login");
