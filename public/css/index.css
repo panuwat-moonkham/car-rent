@@ -246,26 +246,6 @@ section .containhead .contactForm .formBox .inputBox input[type="submit"]:hover
     background: #CB3066;
 }
 
-
-
-
-button
-{
-    margin-left: 20px;
-    padding: 9px 25px;
-    background-color: #283c86;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-button:hover{
-    background-color: #45a247;
-
-}
-
 .container{
     width: 90%;
     margin: 0 auto;
@@ -336,6 +316,9 @@ button:hover{
     text-decoration: none;
     margin-top: 20px;
 }
+
+
+
 
 
 
