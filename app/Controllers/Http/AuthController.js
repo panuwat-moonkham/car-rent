@@ -53,7 +53,7 @@ class AuthController {
         return view.render("index") ;
     }
 
-    cars_cardb({request,response}){
+    async cars_cardb({request,response}){
         const data = await Database
         .select("*")
         .from('cars','cars_rent')
@@ -68,6 +68,11 @@ class AuthController {
         })
         //yield===await
         return response.redirect("/cars")
+    }
+
+    services({view,request,response}){
+        return view.render('/services')
+
     }
 
 
