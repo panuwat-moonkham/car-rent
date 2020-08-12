@@ -52,6 +52,18 @@ class AuthController {
     cars({view}){
         return view.render("index") ;
     }
+    async cars({request,response}){
+        //const {car_name,car_price,car_img,item} = request.body
+        const data =await Database
+        data
+        .select("car_name")
+        .from("cars")
+        
+        return response.redirect("/cars")
+    }
+    services({view}){
+        return view.render("services") ;
+    }
 
     async cars_cardb({request,response}){
         const data = await Database
@@ -66,7 +78,6 @@ class AuthController {
         .then(function (data) {
         console.log(data); 
         })
-        //yield===await
         return response.redirect("/cars")
     }
 
@@ -75,6 +86,15 @@ class AuthController {
 
     }
 
+    add_car({view}){
+        return view.render("add_car") ;
+    }
+
+    async add_car_data({request,response}){ 
+        const {car_name,car_price,car_img,item}=request.body
+        await Database.from("cars").insert({car_name,car_price,car_img,item})
+        return response.redirect("/add_car")
+    }
 
 }    
     
