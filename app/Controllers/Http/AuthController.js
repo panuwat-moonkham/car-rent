@@ -47,6 +47,28 @@ class AuthController {
         return view.render("index") ;
     }
 
+    cars({view}){
+        return view.render("index") ;
+    }
+
+    cars_cardb({request,response}){
+        const data = await Database
+        .select("*")
+        .from('cars','cars_rent')
+        //.where("cars_rent.car_id = cars.id")
+
+        fetch()
+        .then(function (response) {
+        return response.json() 
+        })
+        .then(function (data) {
+        console.log(data); 
+        })
+        //yield===await
+        return response.redirect("/cars")
+    }
+
+
 }    
     
 
