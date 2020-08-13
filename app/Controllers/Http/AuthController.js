@@ -65,6 +65,11 @@ class AuthController {
         return view.render("cars",{car_name,car_price,car_img,item})
      }
 
+    services({view,request,response}){
+        return view.render('/services')
+
+    }
+
     add_car({view}){
         return view.render("add_car") ;
     }

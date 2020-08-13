@@ -234,16 +234,17 @@ section .containhead .contactForm .formBox .inputBox input[type="submit"]
 {
     position: relative;
     cursor: pointer;
-    background: #16BFFD;
+    background: #283c86;
     color: #fff;
     border: none;
     max-width: 150px;
     padding: 12px;
+    border-radius: 30px;
 }
 
 section .containhead .contactForm .formBox .inputBox input[type="submit"]:hover
 {
-    background: #CB3066;
+    background: #45a247;
 }
 
 .container{
