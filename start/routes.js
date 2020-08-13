@@ -40,3 +40,5 @@ Route.post("/api/register","AuthController.registerUser")
 
 Route.get("/cars","AuthController.cars");
 Route.post("/cars" , "Authcontrooler.cars_cardb")
+Route.post("/api/cars","AuthController.cars_cardb")
+

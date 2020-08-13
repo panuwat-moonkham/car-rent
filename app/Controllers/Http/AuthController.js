@@ -50,36 +50,20 @@ class AuthController {
     }
 
     cars({view}){
-        return view.render("index") ;
+        return view.render("cars") ;
     }
-    async cars({request,response}){
-        //const {car_name,car_price,car_img,item} = request.body
-        const data =await Database
-        data
-        .select("car_name")
-        .from("cars")
-        
-        return response.redirect("/cars")
-    }
+
     services({view}){
         return view.render("services") ;
     }
 
-    cars_cardb({request,response}){
-        //const data = await Database
-        // .select("*")
-        // .from('cars','cars_rent')
-        //.where("cars_rent.car_id = cars.id")
-
-        fetch()
-        .then(function (response) {
-        return response.json() 
-        })
-        .then(function (data) {
-        console.log(data); 
-        })
-        return response.redirect("/cars")
-    }
+    async cars_cardb({view,request,response}){
+        const car_name = await Database.select('car_name').from('cars')
+        const car_price = await Database.select('car_price').from('cars')
+        const car_img = await Database.select('car_img').from('cars')
+        const item = await Database.select('item').from('cars')
+        return view.render("cars",{car_name,car_price,car_img,item})
+     }
 
     add_car({view}){
         return view.render("add_car") ;
